@@ -23,6 +23,8 @@
 		A4458B1A216D9BFE000002E8 /* ImageSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4458B19216D9BFE000002E8 /* ImageSelectViewController.swift */; };
 		A4458B1C216D9C1D000002E8 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4458B1B216D9C1D000002E8 /* PostViewController.swift */; };
 		A4458B1E216D9C2A000002E8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4458B1D216D9C2A000002E8 /* SettingViewController.swift */; };
+		A4AE5F4F216EDB660011DDE8 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE5F4E216EDB660011DDE8 /* CommentViewController.swift */; };
+		A4AE5F51216F2FD40011DDE8 /* CommentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE5F50216F2FD40011DDE8 /* CommentData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		A4458B19216D9BFE000002E8 /* ImageSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectViewController.swift; sourceTree = "<group>"; };
 		A4458B1B216D9C1D000002E8 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		A4458B1D216D9C2A000002E8 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		A4AE5F4E216EDB660011DDE8 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		A4AE5F50216F2FD40011DDE8 /* CommentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 				A4458B03216D9ACE000002E8 /* AppDelegate.swift */,
 				A4458B05216D9ACE000002E8 /* ViewController.swift */,
 				A4458B07216D9ACE000002E8 /* Main.storyboard */,
+				A4AE5F4E216EDB660011DDE8 /* CommentViewController.swift */,
 				A4458B15216D9BD7000002E8 /* LoginViewController.swift */,
 				A4458B17216D9BED000002E8 /* HomeViewController.swift */,
 				A4458B19216D9BFE000002E8 /* ImageSelectViewController.swift */,
@@ -112,6 +117,7 @@
 				A4458B0F216D9ACF000002E8 /* Info.plist */,
 				A41B35DF216DDB86007CF204 /* Const.swift */,
 				A41B35E1216DDE84007CF204 /* PostData.swift */,
+				A4AE5F50216F2FD40011DDE8 /* CommentData.swift */,
 				A41B35E3216DDF86007CF204 /* PostTableViewCell.swift */,
 				A41B35E4216DDF86007CF204 /* PostTableViewCell.xib */,
 			);
@@ -245,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4458B1C216D9C1D000002E8 /* PostViewController.swift in Sources */,
+				A4AE5F51216F2FD40011DDE8 /* CommentData.swift in Sources */,
 				A41B35E2216DDE84007CF204 /* PostData.swift in Sources */,
 				A4458B16216D9BD7000002E8 /* LoginViewController.swift in Sources */,
 				A4458B06216D9ACE000002E8 /* ViewController.swift in Sources */,
@@ -254,6 +261,7 @@
 				A41B35E5216DDF86007CF204 /* PostTableViewCell.swift in Sources */,
 				A4458B1E216D9C2A000002E8 /* SettingViewController.swift in Sources */,
 				A4458B18216D9BED000002E8 /* HomeViewController.swift in Sources */,
+				A4AE5F4F216EDB660011DDE8 /* CommentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,8 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
+    // var parentViewController: UIViewController?
+    
     @IBOutlet weak var postImageView: UIImageView!
     
     @IBOutlet weak var likeButton: UIButton!
@@ -20,6 +22,18 @@ class PostTableViewCell: UITableViewCell {
     
     @IBOutlet weak var captionLabel: UILabel!
     
+    @IBOutlet weak var commentLabel: UILabel!
+    
+    @IBOutlet weak var commentButton: UIButton!
+
+/*
+    @IBAction func handleCommentButton(_ sender: Any) {
+        // コメントの画面を開く
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let commentViewController = storyboard.instantiateViewController(withIdentifier: "Comment") as! CommentViewController
+        self.parentViewController?.present(commentViewController, animated: true, completion: nil)
+    }
+  */
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

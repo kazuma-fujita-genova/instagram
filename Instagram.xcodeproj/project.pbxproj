@@ -13,6 +13,7 @@
 		A41B35E2216DDE84007CF204 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41B35E1216DDE84007CF204 /* PostData.swift */; };
 		A41B35E5216DDF86007CF204 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41B35E3216DDF86007CF204 /* PostTableViewCell.swift */; };
 		A41B35E6216DDF86007CF204 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41B35E4216DDF86007CF204 /* PostTableViewCell.xib */; };
+		A42514122174777A002EDA6E /* comment.svg in Resources */ = {isa = PBXBuildFile; fileRef = A42514112174777A002EDA6E /* comment.svg */; };
 		A4458B04216D9ACE000002E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4458B03216D9ACE000002E8 /* AppDelegate.swift */; };
 		A4458B06216D9ACE000002E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4458B05216D9ACE000002E8 /* ViewController.swift */; };
 		A4458B09216D9ACE000002E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4458B07216D9ACE000002E8 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		A41B35E1216DDE84007CF204 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		A41B35E3216DDF86007CF204 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		A41B35E4216DDF86007CF204 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		A42514112174777A002EDA6E /* comment.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = comment.svg; sourceTree = "<group>"; };
 		A4458B00216D9ACE000002E8 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4458B03216D9ACE000002E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4458B05216D9ACE000002E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A4251410217476F7002EDA6E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A42514112174777A002EDA6E /* comment.svg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		A4458AF7216D9ACE000002E8 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +112,7 @@
 		A4458B02216D9ACE000002E8 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				A4251410217476F7002EDA6E /* Resources */,
 				A41B35DD216DB3D3007CF204 /* GoogleService-Info.plist */,
 				A4458B03216D9ACE000002E8 /* AppDelegate.swift */,
 				A4458B05216D9ACE000002E8 /* ViewController.swift */,
@@ -188,6 +199,7 @@
 				A41B35E6216DDF86007CF204 /* PostTableViewCell.xib in Resources */,
 				A41B35DE216DB3D3007CF204 /* GoogleService-Info.plist in Resources */,
 				A4458B0B216D9ACF000002E8 /* Assets.xcassets in Resources */,
+				A42514122174777A002EDA6E /* comment.svg in Resources */,
 				A4458B09216D9ACE000002E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,9 +215,11 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Instagram/Pods-Instagram-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CLImageEditor/CLImageEditor.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/ESTabBarController/ESTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -213,9 +227,11 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CLImageEditor.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVGKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",

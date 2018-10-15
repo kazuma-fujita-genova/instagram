@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+import SVGKit
 
 class PostTableViewCell: UITableViewCell {
 
@@ -25,6 +28,8 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var commentLabel: UILabel!
     
     @IBOutlet weak var commentButton: UIButton!
+    
+    var isComment : Bool = false
 
 /*
     @IBAction func handleCommentButton(_ sender: Any) {
@@ -37,6 +42,11 @@ class PostTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        let svgImage = SVGKImage(named: "comment")
+        svgImage?.size = commentButton.bounds.size
+        self.commentButton.setImage(svgImage?.uiImage, for: .normal)
+        self.commentButton.setTitle("", for: .normal)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -46,6 +56,7 @@ class PostTableViewCell: UITableViewCell {
     }
     
     func setPostData(_ postData: PostData) {
+        
         self.postImageView.image = postData.image
         
         self.captionLabel.text = "\(postData.name!) : \(postData.caption!)"
@@ -64,5 +75,38 @@ class PostTableViewCell: UITableViewCell {
             let buttonImage = UIImage(named: "like_none")
             self.likeButton.setImage(buttonImage, for: .normal)
         }
+        
+        
+        // if self.isComment && !postData.comments.isEmpty {
+        if !postData.comments.isEmpty {
+            for comment_key in postData.comments {
+                let commentRef = Database.database().reference().child(Const.CommentPath).child(comment_key)
+                //commentRef.observe(.value, with: { snapshot in
+                commentRef.observeSingleEvent(of: .value, with: { snapshot in
+                    let commentDict = snapshot.value as! [String : AnyObject]
+                    let commenter = commentDict["name"]
+                    let comment = commentDict["comment"]
+                    self.commentLabel.text?.append("\(commenter!) : \(comment!)\n")
+                })
+            }
+        }
+        else {
+            self.commentLabel.text = "0件"
+        }
+        
+        /*
+        if postData.comment == nil || postData.comment!.isEmpty {
+            self.commentLabel.text = "0件"
+        }
+        else {
+            self.commentLabel.text = postData.comment
+        }
+         */
     }
+    
+    /*
+    @objc func addCommentButton(_ sender: UIButton, forEvent event: UIEvent) {
+        self.isComment = true
+    }
+     */
 }

@@ -143,7 +143,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let indexPath = tableView.indexPathForRow(at: point)
         
         // 配列からタップされたインデックスのデータを取り出す
-        var postData = postArray[indexPath!.row]
+        let postData = postArray[indexPath!.row]
         
         // コメントの画面を開く
         let commentViewController = self.storyboard?.instantiateViewController(withIdentifier: "Comment") as! CommentViewController

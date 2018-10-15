@@ -13,5 +13,5 @@ target 'Instagram' do
   pod 'Firebase/Database'
   pod 'SVProgressHUD','2.2.5'
   pod 'CLImageEditor/AllTools','0.2.3'
-
+  pod 'SVGKit', :git => 'https://github.com/SVGKit/SVGKit.git', :branch => '2.x' 
 end

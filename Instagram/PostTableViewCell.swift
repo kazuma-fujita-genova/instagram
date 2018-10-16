@@ -76,8 +76,9 @@ class PostTableViewCell: UITableViewCell {
             self.likeButton.setImage(buttonImage, for: .normal)
         }
         
+        self.commentLabel.text = ""
         
-        // if self.isComment && !postData.comments.isEmpty {
+        /*
         if !postData.comments.isEmpty {
             for comment_key in postData.comments {
                 let commentRef = Database.database().reference().child(Const.CommentPath).child(comment_key)
@@ -90,10 +91,28 @@ class PostTableViewCell: UITableViewCell {
                 })
             }
         }
-        else {
-            self.commentLabel.text = "0件"
+         */
+        /*
+        if !postData.comments.isEmpty {
+            for commentDict in postData.comments {
+                let commenter = commentDict["name"]
+                let comment = commentDict["comment"]
+                self.commentLabel.text?.append("\(commenter!) : \(comment!)\n")
+            }
         }
-        
+         */
+        if !postData.comments.isEmpty {
+            for commentDict in postData.comments {
+                let commenter = commentDict["name"]
+                let comment = commentDict["comment"]
+                self.commentLabel.text?.append("\(commenter!) : \(comment!)\n")
+            }
+        }
+        /*
+        else {
+            self.commentLabel.text = ""
+        }
+        */
         /*
         if postData.comment == nil || postData.comment!.isEmpty {
             self.commentLabel.text = "0件"

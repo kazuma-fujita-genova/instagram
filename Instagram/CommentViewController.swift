@@ -32,11 +32,11 @@ class CommentViewController: UIViewController {
             // 辞書を作成してFirebaseに保存する
             let time = Date.timeIntervalSinceReferenceDate
             let name = Auth.auth().currentUser?.displayName
-            let commentRef = Database.database().reference().child(Const.CommentPath)
+            // let commentRef = Database.database().reference().child(Const.CommentPath)
             let commentDic = ["comment": comment, "time": String(time), "name": name!]
-            let key = commentRef.childByAutoId().key
+            // let key = commentRef.childByAutoId().key
             // commentRef.childByAutoId().setValue(commentDic)
-            commentRef.child(key).setValue(commentDic)
+            // commentRef.child(key).setValue(commentDic)
             
             // 増えたCommentをFirebaseに保存する
             let postRef = Database.database().reference().child(Const.PostPath).child(postData.id!)
@@ -55,9 +55,12 @@ class CommentViewController: UIViewController {
             })
             */
             
+            // var comment_keys = postData.comment_keys
+            // comment_keys.append(key)
             var comments = postData.comments
-            comments.append(key)
+            comments.append(commentDic)
             let set_values = ["comments": comments]
+            // let set_values = ["comments": comment_keys]
             postRef.updateChildValues(set_values)
             
             // self.postButton.addTarget(self, action: #selector(PostTableViewCell.addCommentButton(_:forEvent:)), for: .touchUpInside)
